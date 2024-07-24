@@ -26,5 +26,9 @@ La segunda participación en ext2, ext3 o ext4. (mientras sea Linux no importa, 
 # Observaciones 
 Es un proceso relativamente simple pero sujeto a fallos. Durante el arranque de la Raspberry puede que se agobie con tanta información si no está acostumbrado. 
 
-Sugiero una vez ingrese al shell, ejecute <code>journalctl-xe</code> para poder ver cada servicio y su estado desde el arranque. 
+Si quiere usar otro nombre para la partición ROOT, debe modificar el archivo cmdlines.txt en la instrucción root=...="ROOT"
+
+Si tiene una imagen pre-elaborada (squashfs o init-tranf), debe modificar el archivo cmdlines.txt en la instrucción root=ruta/imagen y añadir su sistema de ficheros.
+
+Sugiero una vez ingrese al shell, ejecute <code>journalctl -xe</code> para poder ver cada servicio y su estado desde el arranque. 
 
