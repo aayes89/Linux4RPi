@@ -2,7 +2,7 @@
 "Raspberry para Linux y Linux para todos"
 
 # Descripción
-Pruebe cualquier distribución de Linux (arm64 y armhf) en una Raspberry Pi 3. Actualmente probado con Debian (Stretch y Bullseye), Ubuntu, Kali-Linux Rolling y Void. Planeamos añadir soporte para ejecutar CD/DVD en modo Live para cada distribución.
+Pruebe cualquier distribución de Linux (aarch64, arm64 y armhf) en una Raspberry Pi 3. Actualmente probado con Debian (Stretch y Bullseye), Ubuntu, Kali-Linux Rolling y Void. Planeamos añadir soporte para ejecutar CD/DVD en modo Live para cada distribución.
 
 # Componentes Necesarios
 * Raspberry Pi 3 (se recomienda probar con la Pi 2 y versiones superiores)
