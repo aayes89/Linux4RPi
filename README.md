@@ -7,9 +7,9 @@ Pruebe cualquier distribución de Linux (arm64 y armhf) en una Raspberry Pi 3. A
 # Componentes Necesarios
 * Raspberry Pi 3 (se recomienda probar con la Pi 2 y versiones superiores)
 * Tarjeta SD de al menos 2GB (o según el tamaño del CD/DVD)
-* PC con lector CD/DVD (para realizar las instrucciones)
-* Conexión a Internet (para descargar y actualizar repositorios, o tener un repositorio local)
-* Editor de particiones: iMagicPro, gparted, PartitionMagic, PartitionGuru, etc.
+* PC, Laptop, Tableta o equivalente con lector de CD/DVD (opcional) y de memorias SD o equivalente
+* Conexión a Internet (opcional); para descargar y actualizar repositorios, o contar con uno local
+* Editor de particiones: iMagicPro, gparted, PartitionMagic, PartitionGuru, etc. (uno basta)
 * Paciencia (especialmente si desea configurar desde nivel base)
   
 # Instrucciones
