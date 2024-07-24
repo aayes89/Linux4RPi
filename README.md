@@ -1,34 +1,38 @@
 # Linux4RPi
 "Raspberry para Linux y Linux para todos"
-# Descripción 
-Pruebe cualquier distro Linux (arm64 y armhf) en una Raspberry Pi 3. Comprobado actualmente por falta de tiempo, con Debian (Stretch y Bullseye), Ubuntu, Kali-Linux Rolling y Void.
-<p>Queda pendiente utilizar CD/DVD en modo Live de cada una</p>
 
-# Componentes
-- Raspberry Pi 3 (habrá que probar con la 2 y superiores)
-- SD card mínima de 2GB o según el tamaño del CD/DVD.
-- PC con lector CD/DVD y/o ara realizar las instrucciones 
-- Conexión a Internet (para descargar y actualizar repositorios, en caso contrario tener uno local)
-- Editor de particiones: iMagicPro, gparted, PartitionMagic, PartitionGuru, etc. (importante, cualquier de ellos)
-- Algo de paciencia (si quieres ir a nivel base)
+# Descripción
+Pruebe cualquier distribución de Linux (arm64 y armhf) en una Raspberry Pi 3. Actualmente probado con Debian (Stretch y Bullseye), Ubuntu, Kali-Linux Rolling y Void. Planeamos añadir soporte para ejecutar CD/DVD en modo Live para cada distribución.
+
+# Componentes Necesarios
+* Raspberry Pi 3 (se recomienda probar con la Pi 2 y versiones superiores)
+* Tarjeta SD de al menos 2GB (o según el tamaño del CD/DVD)
+* PC con lector CD/DVD (para realizar las instrucciones)
+* Conexión a Internet (para descargar y actualizar repositorios, o tener un repositorio local)
+* Editor de particiones: iMagicPro, gparted, PartitionMagic, PartitionGuru, etc.
+* Paciencia (especialmente si desea configurar desde nivel base)
   
-# Instrucciones 
-- Crear 2 particiones en la memoria SD (BOOT y ROOT)
-La primera participación de 100MB en FAT16 (aunque FAT32 también funciona)
-La segunda participación en ext2, ext3 o ext4. (mientras sea Linux no importa, pero que ocupe el espacio restante de la SD)
-- Montar la partición BOOT
-- Copiar y extraer el contenido del comprimido (boot.zip) en la partición
-- Montar la partición ROOT
-- Copiar el contenido desde la raíz del CD/DVD o la imagen a ejecutar (bin, etc, usr,...,)
-- Desmontar memoria SD del PC
-- Conectar a la Raspberry y disfrutar
-  
-# Observaciones 
-Es un proceso relativamente simple pero sujeto a fallos. Durante el arranque de la Raspberry puede que se agobie con tanta información si no está acostumbrado. 
-
-Si quiere usar otro nombre para la partición ROOT, debe modificar el archivo cmdlines.txt en la instrucción root=...="ROOT"
-
-Si tiene una imagen pre-elaborada (squashfs o init-tranf), debe modificar el archivo cmdlines.txt en la instrucción root=ruta/imagen y añadir su sistema de ficheros.
-
-Sugiero una vez ingrese al shell, ejecute <code>journalctl -xe</code> para poder ver cada servicio y su estado desde el arranque. 
-
+# Instrucciones
+* Crear Particiones en la Tarjeta SD:
+  - BOOT: Primera partición de 100MB en FAT16 (FAT32 también es compatible).
+  - ROOT: Segunda partición en ext2, ext3 o ext4 (ocupará el espacio restante de la SD).
+* Preparar la Partición BOOT:
+  - Montar la partición BOOT.
+  - Copiar y extraer el contenido del archivo comprimido (boot.zip) en la partición BOOT.
+* Preparar la Partición ROOT:
+  - Montar la partición ROOT.
+  - Copiar el contenido desde la raíz del CD/DVD o de la imagen a ejecutar (bin, etc, usr, etc.).
+* Finalizar y Ejecutar:
+  - Desmontar la tarjeta SD del PC.
+  - Conectar la tarjeta SD a la Raspberry Pi y encenderla.
+  - Disfrutar de la distribución de Linux.
+    
+# Observaciones
+* Proceso Simple pero Delicado:
+  - Puede haber errores durante el arranque de la Raspberry Pi, especialmente si no está familiarizado con el procedimiento.
+* Modificar Nombre de la Partición ROOT:
+  - Si desea usar otro nombre para la partición ROOT, modifique el archivo cmdlines.txt en la instrucción root=...="ROOT".
+* Uso de Imágenes Pre-elaboradas:
+  - Para imágenes pre-elaboradas (squashfs o init-tranf), modifique el archivo cmdlines.txt en la instrucción root=ruta/imagen y añada su sistema de ficheros.
+* Verificar Estado de Servicios:
+  - Una vez ingresado al shell, ejecute journalctl -xe para ver el estado de cada servicio desde el arranque.
