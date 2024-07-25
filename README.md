@@ -20,6 +20,7 @@ Pruebe cualquier distribución de Linux (aarch64, arm64 y armhf) en una Raspberr
   - Montar la partición BOOT.
   - Descargar los dos archivos part_aa y part_bb
   - Si estas en Linux o Mac, ejecutar <code>cat part_* > boot.tar.xz</code> y luego <code>tar -xJvf boot.tar.xz</code> para extraer su contenido.
+  - Si estas en Windows (utilice 7zip, Winrar, WSL o PowerShell) para reunir las partes y extraer el contenido.
   - Copiar el contenido del archivo comprimido (boot.tar.xz) en la partición BOOT.
 * Preparar la Partición ROOT:
   - Montar la partición ROOT.
