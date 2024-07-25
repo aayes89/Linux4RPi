@@ -18,7 +18,9 @@ Pruebe cualquier distribución de Linux (aarch64, arm64 y armhf) en una Raspberr
   - ROOT: Segunda partición en ext2, ext3 o ext4 (ocupará el espacio restante de la SD).
 * Preparar la Partición BOOT:
   - Montar la partición BOOT.
-  - Copiar y extraer el contenido del archivo comprimido (boot.zip) en la partición BOOT.
+  - Descargar los dos archivos part_aa y part_bb
+  - Si estas en Linux o Mac, ejecutar <code>cat part_* > boot.tar.xz</code> y luego <code>tar -xJvf boot.tar.xz</code> para extraer su contenido.
+  - Copiar el contenido del archivo comprimido (boot.tar.xz) en la partición BOOT.
 * Preparar la Partición ROOT:
   - Montar la partición ROOT.
   - Copiar el contenido de la raíz del CD/DVD o de la imagen a ejecutar (bin, etc, usr, etc.).
