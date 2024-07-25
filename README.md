@@ -14,7 +14,7 @@ Pruebe cualquier distribución de Linux (aarch64, arm64 y armhf) en una Raspberr
   
 # Instrucciones
 * Crear Particiones en la Tarjeta SD:
-  - BOOT: Primera partición de 100MB en FAT16 (FAT32 también es compatible).
+  - BOOT: Primera partición de 150MB en FAT16 (FAT32 también es compatible).
   - ROOT: Segunda partición en ext2, ext3 o ext4 (ocupará el espacio restante de la SD).
 * Preparar la Partición BOOT:
   - Montar la partición BOOT.
@@ -33,9 +33,27 @@ Pruebe cualquier distribución de Linux (aarch64, arm64 y armhf) en una Raspberr
 # Observaciones
 * Proceso Simple pero Delicado:
   - Puede haber errores durante el arranque de la Raspberry Pi, especialmente si no está familiarizado con el procedimiento.
+* Utilizar en otros modelos de Raspberry:
+  - Sólo debe añadir lo ficheros de compatibilidad para otras placas a la partición BOOT (https://github.com/raspberrypi/firmware.git)
 * Modificar Nombre de la Partición ROOT:
-  - Si desea usar otro nombre para la partición ROOT, modifique el archivo cmdlines.txt en la instrucción root=...="ROOT".
+  - Utilizar y modificar el archivo cmdline.txt sólo si quiere personalizar la instalación (no recomendable)
+  - Si desea usar otro nombre para la partición ROOT, modifique el archivo cmdlines.txt en la instrucción root=LABEL="ROOT".
 * Uso de Imágenes Pre-elaboradas:
-  - Para imágenes pre-elaboradas (squashfs o init-tranf), modifique el archivo cmdlines.txt en la instrucción root=ruta/imagen y añada su sistema de ficheros.
+  - Para imágenes pre-elaboradas (rootfs, squashfs o init-tranf), modifique el archivo cmdlines.txt en la instrucción root=ruta/imagen y añada su sistema de ficheros.
+  - Si va a utilizar kernel personal, añada la línea: <code>kernel=su_kernel</code> al archivo config.txt
+  - Si va a utilizar initramfs persona, añada la línea: <code>initramfs=su_init</code> al archivo config.txt 
 * Verificar Estado de Servicios:
   - Una vez ingresado al shell, ejecute journalctl -xe para ver el estado de cada servicio desde el arranque.
+* Versiones de sistema:
+  - Es recomendable tener a mano un <b>rc.local</b> personalizado para solventar posibles situaciones estresantes durante el arranque, tengalo presente.
+
+# Pendientes
+* Crear una imagen base para cada sistema conocido o por petición.
+* Subir las imágenes a la nube para hacerlas accesibles.
+* Mejorar el procedimiento de creación de imágenes.
+* Probar las imágenes en otras placas similares.
+* Personalizar las imágenes para: Base (Core), Ligera (Lite), Completa (Full), según cantidad de servicios y aplicaciones (por determinar)
+
+# Creadas
+* Kali-Linux Rolling, imagen base 1GB funcional con reconocimiento de adaptador de red y script personalizado, (ocupa 100MB en BOOT y 1GB el ROOT).
+* Debian (Stretch, Bullseye y Buster)
