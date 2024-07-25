@@ -6,7 +6,7 @@ Pruebe cualquier distribución de Linux (aarch64, arm64 y armhf) en una Raspberr
 
 # Componentes Necesarios
 * Raspberry Pi 3 (se recomienda probar con la Pi 2 y versiones superiores)
-* Tarjeta SD de al menos 2GB (o según el tamaño del CD/DVD)
+* Tarjeta SD de al menos 2GB (4GB de preferencia para el mínimo, 8GB para ir sobrado, o según el tamaño del CD/DVD)
 * PC, Laptop, Tableta o equivalente con lector de CD/DVD (opcional) y de memorias SD o equivalente
 * Conexión a Internet (opcional); para descargar y actualizar repositorios, o contar con uno local
 * Editor de particiones: iMagicPro, gparted, PartitionMagic, PartitionGuru, etc. (uno basta)
@@ -21,7 +21,7 @@ Pruebe cualquier distribución de Linux (aarch64, arm64 y armhf) en una Raspberr
   - Copiar y extraer el contenido del archivo comprimido (boot.zip) en la partición BOOT.
 * Preparar la Partición ROOT:
   - Montar la partición ROOT.
-  - Copiar el contenido desde la raíz del CD/DVD o de la imagen a ejecutar (bin, etc, usr, etc.).
+  - Copiar el contenido de la raíz del CD/DVD o de la imagen a ejecutar (bin, etc, usr, etc.).
 * Finalizar y Ejecutar:
   - Desmontar la tarjeta SD del PC.
   - Conectar la tarjeta SD a la Raspberry Pi y encenderla.
